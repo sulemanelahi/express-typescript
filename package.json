@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "start": "node build/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc -p .",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "aws-sdk": "^2.1176.0",
